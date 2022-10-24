@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  asir_dockerGit:
+    container_name: asir_dockerGit
+    image: internetsystemsconsortium/bind9:9.16
+    ports:
+      - 5300:53/udp
+      - 5300:53/tcp
+    volumes:
+      - /home/asir2a/Documentos/SRI/practica2/conf:/etc/bind
+      - /home/asir2a/Documentos/SRI/practica2/zonas:/var/lib/bind
